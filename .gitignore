@@ -1,3 +1,5 @@
 .env
 __pycache__/
 56
+server/node_modules
+data
