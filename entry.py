@@ -23,8 +23,8 @@ CMC_HIST = os.getenv('CMC_HISTORICAL')
 MIN_MARKET_CAP = 100_000_000
 MIN_DAILY_VOLUME = 1_000_000
 MIN_TRADING_HISTORY = 90
-MIN_VOL_TVL_RATIO = 0
-MAX_VOL_TVL_RATIO = 100
+MIN_VOL_TVL_RATIO = 0  
+MAX_VOL_TVL_RATIO = 100 
 
 def get_market_cap(token_data):
     return token_data['quote']['USD']['market_cap']
@@ -172,8 +172,6 @@ def entry_check(pair, mint_x, mint_y):
             print(f"Trading History Check Failed - X: {history_x} days, Y: {history_y} days")
             return False
         
-
-        print(pair)
         # Get pool TVL
         pool_tvl = float(pair.get('liquidity', 0))
         if pool_tvl == 0:
@@ -187,8 +185,9 @@ def entry_check(pair, mint_x, mint_y):
             print("Volume/TVL Ratio Check Failed - Cannot calculate ratio")
             return False
             
-        if (vol_tvl_ratio < MIN_VOL_TVL_RATIO or vol_tvl_ratio > MAX_VOL_TVL_RATIO):
-            print(f"Volume/TVL Ratio Check Failed - Ratio: {vol_tvl_ratio:.2f}")
+        if (vol_tvl_ratio < MIN_VOL_TVL_RATIO or 
+            vol_tvl_ratio > MAX_VOL_TVL_RATIO):
+            print(f"Volume/TVL Ratio Check Failed - X: {vol_tvl_ratio_x:.3f}, Y: {vol_tvl_ratio_y:.3f}")
             return False
         
         # Fetch historical data and calculate RSI
