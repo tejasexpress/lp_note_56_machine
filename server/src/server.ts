@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import routes from './routes/buy';
+import routes from './routes/createPosition';
 dotenv.config();
 
 const app = express();

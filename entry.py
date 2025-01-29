@@ -187,7 +187,7 @@ def entry_check(pair, mint_x, mint_y):
             
         if (vol_tvl_ratio < MIN_VOL_TVL_RATIO or 
             vol_tvl_ratio > MAX_VOL_TVL_RATIO):
-            print(f"Volume/TVL Ratio Check Failed - X: {vol_tvl_ratio_x:.3f}, Y: {vol_tvl_ratio_y:.3f}")
+            print(f"Volume/TVL Ratio Check Failed - Ratio: {vol_tvl_ratio:.2f}")
             return False
         
         # Fetch historical data and calculate RSI
@@ -216,7 +216,3 @@ def entry_check(pair, mint_x, mint_y):
     except (KeyError, TypeError) as e:
         print(f"Error processing token data: {e}")
         return False
-     
-
-
-
