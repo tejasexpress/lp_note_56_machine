@@ -22,20 +22,34 @@ class InvestablePairs:
             if not entry_check(first_pair, first_pair['mint_x'], first_pair['mint_y']):
                 continue
                 
-            if len(group['pairs']) < 2:
-                print("not enough dex pools available")
+            if len(group['pairs']) < 5:  # Changed from 2 to 5 for minimum LP requirement
+                print(f"Not enough major LP pools for {group['name']} (found {len(group['pairs'])})")
                 continue
                 
-            print(f"group {group['name']} Passed")
+            # Check total TVL and volume across all pools in the group
+            total_tvl = sum(float(pair.get('liquidity', 0)) for pair in group['pairs'])
+            total_volume = sum(pair.get('trade_volume_24h', 0) for pair in group['pairs'])
+            
+            if total_tvl < 2_000_000:  # $2M minimum TVL
+                print(f"Insufficient total TVL for {group['name']}: ${total_tvl:,.2f}")
+                continue
+                
+            if total_volume < 3_000_000:  # $3M minimum 24h volume
+                print(f"Insufficient 24h volume for {group['name']}: ${total_volume:,.2f}")
+                continue
+                
+            print(f"Group {group['name']} Passed - TVL: ${total_tvl:,.2f}, Volume: ${total_volume:,.2f}")
             
             grp = {
                 'name': group['name'],
                 'pools': [],
+                'total_tvl': total_tvl,
+                'total_volume_24h': total_volume,
                 'last_updated': datetime.now().isoformat()
             }
             
             for pair in group['pairs']:
-                if pair['trade_volume_24h'] > 1_000_000:
+                if pair['trade_volume_24h'] > 1_000_000:  # Individual pool minimum volume
                     symbol_x, symbol_y = pair['name'].split('-')
                     pool_info = {
                         'address': pair['address'],
