@@ -3,11 +3,11 @@ import { bs58 } from "@coral-xyz/anchor/dist/cjs/utils/bytes";
 
 // Wallet Configuration
 export const user = Keypair.fromSecretKey(
-  new Uint8Array(bs58.decode(process.env.USER_PRIVATE_KEY || ""))
+  new Uint8Array(bs58.decode("5k8NUPv3WXnNmD5qvxAEtQvYMiDQPy9tahBBdL9rZcfNtwU4MgAcVKwStyXjPRouKZh16XFGAN9TThyZz16zq8EA"))
 );
 
 // Network Configuration
-export const RPC = process.env.RPC || "https://devnet.meteora.ag";
+export const RPC = process.env.RPC || "https://api.mainnet-beta.solana.com";
 export const connection = new Connection(RPC, "finalized");
 
 // Risk Parameters

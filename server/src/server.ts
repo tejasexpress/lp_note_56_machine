@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import routes from './routes/createPosition';
+import createPosition from './routes/createPosition';
+import sellPosition from './routes/sellPosition';
 dotenv.config();
 
 const app = express();
@@ -21,7 +22,8 @@ const requestLogger = (req: express.Request, res: express.Response, next: expres
 app.use(express.json());
 app.use(requestLogger);
 
-app.use('/api', routes);
+app.use('/buy', createPosition);
+app.use('/sell', sellPosition);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
