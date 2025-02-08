@@ -18,7 +18,6 @@ export interface ParsedClockState {
 	space: number;
 }
 
-
 const newBalancePosition = new Keypair();
 
 interface PoolMetrics {
@@ -37,8 +36,8 @@ export async function createBalancePosition(dlmmPool: DLMM, amount: number) {
 	const activeBinPricePerToken = dlmmPool.fromPricePerLamport(
 	  Number(activeBin.price)
 	);
-	const totalXAmount = new BN(amount);
-	const totalYAmount = totalXAmount.mul(new BN(Number(activeBinPricePerToken)));
+	const totalYAmount = new BN(amount);
+	const totalXAmount = totalYAmount.mul(new BN(Number(activeBinPricePerToken)));
   
 	// Create Position
 	const createPositionTx =
@@ -187,7 +186,6 @@ export async function swap(dlmmPool: DLMM) {
 
 
   async function getImpermanentLoss(dlmmPool: DLMM): Promise<number> {
-	// Get user's positions
 	const userPositions = await dlmmPool.getPositionsByUserAndLbPair(user.publicKey);
   
 	if (!userPositions || userPositions.userPositions.length === 0) {
@@ -195,7 +193,6 @@ export async function swap(dlmmPool: DLMM) {
 	  return 0;
 	}
   
-	// Loop through all positions and calculate IL for each
 	let totalIL = 0;
   
 	for (const position of userPositions.userPositions) {
