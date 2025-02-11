@@ -317,7 +317,7 @@ export async function swap(dlmmPool: DLMM) {
   
 
 export  async function manageRisk(address: string) {
-	dlmmPool = await DLMM.create(connection, new PublicKey(address));
+	const dlmmPool = await DLMM.create(connection, new PublicKey(address));
 	/*
 		health score is above 70
 		IL is below 0.015
