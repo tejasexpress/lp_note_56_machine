@@ -2,6 +2,7 @@ import { Keypair, sendAndConfirmTransaction } from "@solana/web3.js";
 import DLMM from "@meteora-ag/dlmm";
 import { StrategyType } from "@meteora-ag/dlmm";
 import { user, connection, RISK_PARAMS } from "./config";
+import {PublicKey} from "@solana/web3.js";
 import BN from "bn.js";
 import axios from "axios";
 
@@ -27,7 +28,7 @@ interface PoolMetrics {
 	currentPrice: number;
 }
 
-export async function createBalancePosition(dlmmPool: DLMM, amount: number) {
+export async function createBalancePosition(dlmmPool: DLMM, amount: number = 0) {
 	const TOTAL_RANGE_INTERVAL = 10; // 10 bins on each side of the active bin
 	const activeBin = await dlmmPool.getActiveBin();
 	const minBinId = activeBin.binId - TOTAL_RANGE_INTERVAL;
@@ -39,7 +40,6 @@ export async function createBalancePosition(dlmmPool: DLMM, amount: number) {
 	const totalYAmount = new BN(amount);
 	const totalXAmount = totalYAmount.mul(new BN(Number(activeBinPricePerToken)));
   
-	// Create Position
 	const createPositionTx =
 	  await dlmmPool.initializePositionAndAddLiquidityByStrategy({
 		positionPubKey: newBalancePosition.publicKey,
@@ -63,12 +63,14 @@ export async function createBalancePosition(dlmmPool: DLMM, amount: number) {
 		"🚀 ~ createBalancePositionTxHash:",
 		createBalancePositionTxHash
 	  );
+	  return null;
 	} catch (error) {
 	  console.log("🚀 ~ error:", JSON.parse(JSON.stringify(error)));
+	  return error;
 	}
   }
   
-  async function getUserPositions(dlmmPool: DLMM) {
+  export async function getUserPositions(dlmmPool: DLMM) {
 	const positionsState = await dlmmPool.getPositionsByUserAndLbPair(
 	  user.publicKey
 	);
@@ -109,8 +111,10 @@ export async function addLiquidityToExistingPosition(dlmmPool: DLMM, amount: num
 		[user]
 	  );
 	  console.log("🚀 ~ addLiquidityTxHash:", addLiquidityTxHash);
+	  return null;
 	} catch (error) {
 	  console.log("🚀 ~ error:", JSON.parse(JSON.stringify(error)));
+	  return error;
 	}
 }
 
@@ -147,8 +151,10 @@ export async function removePositionLiquidity(dlmmPool: DLMM) {
 		  removeBalanceLiquidityTxHash
 		);
 	  }
+	  return null;
 	} catch (error) {
 	  console.log("🚀 ~ error:", JSON.parse(JSON.stringify(error)));
+	  return error;
 	}
   }
   
@@ -179,8 +185,10 @@ export async function swap(dlmmPool: DLMM) {
 		user,
 	  ]);
 	  console.log("🚀 ~ swapTxHash:", swapTxHash);
+	  return null;
 	} catch (error) {
 	  console.log("🚀 ~ error:", JSON.parse(JSON.stringify(error)));
+	  return error;
 	}
   }
 
@@ -308,7 +316,8 @@ export async function swap(dlmmPool: DLMM) {
   
   
 
-export  async function manageRisk(dlmmPool: DLMM) {
+export  async function manageRisk(address: string) {
+	dlmmPool = await DLMM.create(connection, new PublicKey(address));
 	/*
 		health score is above 70
 		IL is below 0.015

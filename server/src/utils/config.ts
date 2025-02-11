@@ -7,7 +7,7 @@ export const user = Keypair.fromSecretKey(
 );
 
 // Network Configuration
-export const RPC = process.env.RPC || "https://api.mainnet-beta.solana.com";
+export const RPC = process.env.RPC || "https://mainnet.helius-rpc.com/?api-key=6bfdc1b2-fa33-4bab-be75-40f1b049df64";
 export const connection = new Connection(RPC, "finalized");
 
 // Risk Parameters
