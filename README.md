@@ -1,6 +1,17 @@
 
 # DATA NEEded
 
+
+BUILD INSTRUCTIONS
+
+cd server
+pnpm i
+pnpm dev
+
+
+
+
+
 ### To find pools
 - market cap of each token
 - 3 day average 24hr volume
