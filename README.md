@@ -3,11 +3,11 @@
 
 
 BUILD INSTRUCTIONS
-
+```
 cd server
 pnpm i
 pnpm dev
-
+```
 
 
 
