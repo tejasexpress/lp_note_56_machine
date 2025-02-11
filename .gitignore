@@ -3,3 +3,4 @@ __pycache__/
 56
 server/node_modules
 data
+__pycache__
