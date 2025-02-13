@@ -1,0 +1,425 @@
+{
+  "last_updated": "2025-02-08T14:11:50.159547",
+  "pairs": [
+    {
+      "name": "SOL-USDC",
+      "pools": [
+        {
+          "address": "8gJ7UWboMeQ6z6AQwFP3cAZwSYG8udVS2UesyCbH79r7",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 71490196.6719859,
+          "tvl": 0
+        },
+        {
+          "address": "BGm1tav58oGcsQJehL9WXBFXF7D27vZsKefj4xJKD5Y",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 59302829.8838737,
+          "tvl": 0
+        },
+        {
+          "address": "BVRbyLjjfSBcoyiYFuxbgKYnWuiFaF9CSXEa5vdSZ9Hh",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 17099771.197399277,
+          "tvl": 0
+        },
+        {
+          "address": "5BKxfWMbmYBAEWvyPZS9esPducUba9GqyMjtLCfbaqyF",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 14397434.826298676,
+          "tvl": 0
+        },
+        {
+          "address": "5XRqv7LCoC5FhWKk5JN8n4kCrJs3e4KH1XsYzKeMd5Nt",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 5733336.646586464,
+          "tvl": 0
+        },
+        {
+          "address": "HTvjzsfX3yU6BUodCjZ5vZkUrAxMDTrBs3CJaq43ashR",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 5328152.163272109,
+          "tvl": 0
+        },
+        {
+          "address": "sZxb9vrxJBpFiJBogovhfkYqfapVzveLEU4TmzWv4GN",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 4390797.677676295,
+          "tvl": 0
+        },
+        {
+          "address": "CgqwPLSFfht89pF5RSKGUUMFj5zRxoUt4861w2SkXaqY",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 3882474.8356733304,
+          "tvl": 0
+        },
+        {
+          "address": "1jw5fDodwGEGBVqNXsx2eqiLgNmgMDEeXWSbrTreLCM",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 2696666.8051485196,
+          "tvl": 0
+        },
+        {
+          "address": "6WTbcDmtqDNwxxLe9YzHzpSSBKQ7AduZG7SmYWpRwjZZ",
+          "symbol_x": "USDC",
+          "symbol_y": "SOL",
+          "mint_x": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 2629972.447027389,
+          "tvl": 0
+        },
+        {
+          "address": "5rCf1DM8LjKTw4YqhnoLcngyZYeNnQqztScTogYHAS6",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 2078591.422407343,
+          "tvl": 0
+        },
+        {
+          "address": "5BoHD7DAHsGCA9D8eUkkZTgWTrnpad6G18MnTq3cUS86",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 1588254.8429010564,
+          "tvl": 0
+        },
+        {
+          "address": "8M5rjeDQKW4w4rmWFQLTqCYVuA1rMe9Z2QQ2SZResD9M",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 1419863.6846474963,
+          "tvl": 0
+        },
+        {
+          "address": "2sf5NYcY4zUPXUSmG6f66mskb24t5F8S11pC1Nz5nQT3",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 1282047.5976500984,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 37474847.82951704,
+      "total_volume_24h": 199129058.05834165,
+      "last_updated": "2025-02-08T14:08:06.165875"
+    },
+    {
+      "name": "TRUMP-USDC",
+      "pools": [
+        {
+          "address": "9d9mb8kooFfaD3SctgZtkxQypkshx6ezhbKio89ixyy2",
+          "symbol_x": "TRUMP",
+          "symbol_y": "USDC",
+          "mint_x": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 128601521.14006722,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 440082957.4195311,
+      "total_volume_24h": 129197649.47202498,
+      "last_updated": "2025-02-08T14:08:09.350549"
+    },
+    {
+      "name": "Fartcoin -SOL",
+      "pools": [
+        {
+          "address": "6wJ7W3oHj7ex6MVFp2o26NSof3aey7U8Brs8E371WCXA",
+          "symbol_x": "Fartcoin ",
+          "symbol_y": "SOL",
+          "mint_x": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 67902854.13010831,
+          "tvl": 0
+        },
+        {
+          "address": "BhjvwZoCir2jqVrdGemebDFmTeMW3eENFrxYffkPfj1Y",
+          "symbol_x": "Fartcoin ",
+          "symbol_y": "SOL",
+          "mint_x": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 8644287.491060374,
+          "tvl": 0
+        },
+        {
+          "address": "3JKE7WTssAceWBWea4M9yWCzuby5vgzuCJdRCgCyBUXL",
+          "symbol_x": "Fartcoin ",
+          "symbol_y": "SOL",
+          "mint_x": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 3667890.581573951,
+          "tvl": 0
+        },
+        {
+          "address": "GcwLvsia7M3Evw1HBB2EabpV5NK13ducMdJ5PSYqauoN",
+          "symbol_x": "SOL",
+          "symbol_y": "Fartcoin ",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "volume_24h": 3591144.793264671,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 10381299.770231323,
+      "total_volume_24h": 84881385.70055045,
+      "last_updated": "2025-02-08T14:08:12.560228"
+    },
+    {
+      "name": "JLP-SOL",
+      "pools": [
+        {
+          "address": "J2Gsg3xTDjM8UZjKdEqzBeDwitHb2Ux6TSBX5RzsE42r",
+          "symbol_x": "JLP",
+          "symbol_y": "SOL",
+          "mint_x": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 13341079.855376141,
+          "tvl": 0
+        },
+        {
+          "address": "8e8EiakqpXzeJoZ1h5ZrTSN6SsXXukP2JN2E9N6cFwKm",
+          "symbol_x": "JLP",
+          "symbol_y": "SOL",
+          "mint_x": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 4633997.060292126,
+          "tvl": 0
+        },
+        {
+          "address": "3KKc9ddshVruCwYtU9CvgvZkEkpk49vN2bbK5eqhUPhF",
+          "symbol_x": "JLP",
+          "symbol_y": "SOL",
+          "mint_x": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 1898810.4036731352,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 10508628.970605642,
+      "total_volume_24h": 21356591.592988145,
+      "last_updated": "2025-02-08T14:08:15.816201"
+    },
+    {
+      "name": "TRUMP-SOL",
+      "pools": [
+        {
+          "address": "71HuFmuYAFEFUna2x2R4HJjrFNQHGuagW3gUMFToL9tk",
+          "symbol_x": "TRUMP",
+          "symbol_y": "SOL",
+          "mint_x": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 14875858.772232741,
+          "tvl": 0
+        },
+        {
+          "address": "5BJpnniJB9rGPYXrv3k3RvdcUbPbqkbkXNWUefCkwKi",
+          "symbol_x": "TRUMP",
+          "symbol_y": "SOL",
+          "mint_x": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 3448603.471414268,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 12933505.074781174,
+      "total_volume_24h": 19289754.604569506,
+      "last_updated": "2025-02-08T14:08:19.032254"
+    },
+    {
+      "name": "JLP-USDC",
+      "pools": [
+        {
+          "address": "J27e5izvX4nbaaRDjMKv7DogQzcPidCAECxzE6rK4bF7",
+          "symbol_x": "JLP",
+          "symbol_y": "USDC",
+          "mint_x": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 12974932.87483551,
+          "tvl": 0
+        },
+        {
+          "address": "A3kLJHThGCQc26SA8PgQSYANPkdkYpv2sHghYy1t9QmA",
+          "symbol_x": "USDC",
+          "symbol_y": "JLP",
+          "mint_x": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "mint_y": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+          "volume_24h": 1650776.315208924,
+          "tvl": 0
+        },
+        {
+          "address": "DbTk2SNKWxu9TJbPzmK9HcQCAmraBCFb5VMo8Svwh34z",
+          "symbol_x": "JLP",
+          "symbol_y": "USDC",
+          "mint_x": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 1620518.3132719668,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 11156057.77580368,
+      "total_volume_24h": 18241531.33407589,
+      "last_updated": "2025-02-08T14:08:24.215779"
+    },
+    {
+      "name": "JUP-SOL",
+      "pools": [
+        {
+          "address": "7qt1qBnQ5CNNpMH1no6jYAzuyazP5QWXsUZB7dot5kga",
+          "symbol_x": "JUP",
+          "symbol_y": "SOL",
+          "mint_x": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 7674587.036853578,
+          "tvl": 0
+        },
+        {
+          "address": "C8Gr6AUuq9hEdSYJzoEpNcdjpojPZwqG5MtQbeouNNwg",
+          "symbol_x": "JUP",
+          "symbol_y": "SOL",
+          "mint_x": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 5949158.688702893,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 9871501.239498615,
+      "total_volume_24h": 15198385.733645448,
+      "last_updated": "2025-02-08T14:08:27.456096"
+    },
+    {
+      "name": "WBTC-USDC",
+      "pools": [
+        {
+          "address": "3fUj4dDSwgpJuzriE32KsgmGGowKNZpnt7T9AD1noZrV",
+          "symbol_x": "WBTC",
+          "symbol_y": "USDC",
+          "mint_x": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 13165443.186059598,
+          "tvl": 0
+        },
+        {
+          "address": "3sehQcVywWcFJZ1ri3NmJ7MRkrXbViJMRNN5b6kz8Mqn",
+          "symbol_x": "WBTC",
+          "symbol_y": "USDC",
+          "mint_x": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 1020931.6988518611,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 2512363.401827451,
+      "total_volume_24h": 15146983.310836311,
+      "last_updated": "2025-02-08T14:08:30.771547"
+    },
+    {
+      "name": "JitoSOL-SOL",
+      "pools": [
+        {
+          "address": "BoeMUkCLHchTD31HdXsbDExuZZfcUppSLpYtV3LZTH6U",
+          "symbol_x": "JitoSOL",
+          "symbol_y": "SOL",
+          "mint_x": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 12876885.665461756,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 23747898.166069753,
+      "total_volume_24h": 12881362.713558339,
+      "last_updated": "2025-02-08T14:08:33.977384"
+    },
+    {
+      "name": "MELANIA-USDC",
+      "pools": [
+        {
+          "address": "9DiruRpjnAnzhn6ts5HGLouHtJrT1JGsPbXNYCrFz2ad",
+          "symbol_x": "MELANIA",
+          "symbol_y": "USDC",
+          "mint_x": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 7673937.046906044,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 182567255.28262454,
+      "total_volume_24h": 7674064.659712025,
+      "last_updated": "2025-02-08T14:08:42.267588"
+    },
+    {
+      "name": "JUP-USDC",
+      "pools": [
+        {
+          "address": "Xyb1mSNAtwWWt8nDsg3XX8xuuGtyaq2LHPD2hECbvSo",
+          "symbol_x": "JUP",
+          "symbol_y": "USDC",
+          "mint_x": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 2507977.1679148236,
+          "tvl": 0
+        },
+        {
+          "address": "HfgjZDmexhFVD28Vkb1NbQwWeXP3uDcVTLPjSGHmRHhL",
+          "symbol_x": "JUP",
+          "symbol_y": "USDC",
+          "mint_x": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 2073008.7367046992,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 3244534.5697177704,
+      "total_volume_24h": 5582201.119850537,
+      "last_updated": "2025-02-08T14:08:49.504059"
+    },
+    {
+      "name": "USDT-USDC",
+      "pools": [
+        {
+          "address": "ARwi1S4DaiTG5DX7S4M4ZsrXqpMD1MrTmbu9ue2tpmEq",
+          "symbol_x": "USDC",
+          "symbol_y": "USDT",
+          "mint_x": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "mint_y": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+          "volume_24h": 4164242.7911827625,
+          "tvl": 0
+        }
+      ],
+      "total_tvl": 5588140.084091216,
+      "total_volume_24h": 4274592.2396394685,
+      "last_updated": "2025-02-08T14:09:00.817393"
+    }
+  ]
+}
