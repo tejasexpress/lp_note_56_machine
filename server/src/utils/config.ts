@@ -1,9 +1,12 @@
 import { Connection, Keypair } from "@solana/web3.js";
 import { bs58 } from "@coral-xyz/anchor/dist/cjs/utils/bytes";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // Wallet Configuration
 export const user = Keypair.fromSecretKey(
-  new Uint8Array(bs58.decode("5k8NUPv3WXnNmD5qvxAEtQvYMiDQPy9tahBBdL9rZcfNtwU4MgAcVKwStyXjPRouKZh16XFGAN9TThyZz16zq8EA"))
+  new Uint8Array(bs58.decode(process.env.PRIVATE_KEY || ""))
 );
 
 // Network Configuration

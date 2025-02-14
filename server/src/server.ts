@@ -1,5 +1,4 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import createPosition from './routes/createPosition';
 import sellPosition from './routes/sellPosition';
 import getPos from './routes/getPos';
@@ -7,7 +6,7 @@ import getPairs from './routes/getInvestablePools';
 import cors from 'cors';
 import addLiquidity from './routes/addLiquidity';
 import update from './routes/updatePositions';
-dotenv.config();
+import claimFee from './routes/claimFees';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -35,6 +34,7 @@ app.use('/', getPos)
 app.use('/', getPairs);
 app.use('/', addLiquidity);
 app.use('/', update);
+app.use('/', claimFee);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

@@ -3,6 +3,7 @@ import DLMM from "@meteora-ag/dlmm";
 import { StrategyType } from "@meteora-ag/dlmm";
 import { user, connection, RISK_PARAMS } from "./config";
 import {PublicKey} from "@solana/web3.js";
+import { bs58 } from "@coral-xyz/anchor/dist/cjs/utils/bytes";
 import BN from "bn.js";
 import axios from "axios";
 
@@ -26,6 +27,23 @@ interface PoolMetrics {
 	ilRisk: number;
 	volumeChange24h: number;
 	currentPrice: number;
+}
+
+export async function claimFees(dlmmPool: DLMM,positionPubKey: string, ) {
+
+	const {owner} = await dlmmPool.program.account.positionV2.fetch(positionPubKey);
+
+	const position = await dlmmPool.getPosition(new PublicKey(positionPubKey));
+
+	try {
+
+		await dlmmPool.claimAllRewardsByPosition({ owner, position });
+
+		console.log("🚀 ~ claimFees: Claimed fees successfully");
+	} catch (error) {
+		console.log("🚀 ~ error:", JSON.parse(JSON.stringify(error)));
+		return error;
+	}	
 }
 
 export async function createBalancePosition(dlmmPool: DLMM, amount: number = 0) {
@@ -79,30 +97,34 @@ export async function createBalancePosition(dlmmPool: DLMM, amount: number = 0) 
 
  
   
-export async function addLiquidityToExistingPosition(dlmmPool: DLMM, amount: number) {
+export async function addLiquidityToExistingPosition(dlmmPool: DLMM, amount: number, posPubKey: string) {
 	const TOTAL_RANGE_INTERVAL = 10; // 10 bins on each side of the active bin
 	const activeBin = await dlmmPool.getActiveBin();
 	const minBinId = activeBin.binId - TOTAL_RANGE_INTERVAL;
 	const maxBinId = activeBin.binId + TOTAL_RANGE_INTERVAL;
-  
+	
 	const activeBinPricePerToken = dlmmPool.fromPricePerLamport(
-	  Number(activeBin.price)
+		Number(activeBin.price)
 	);
 	const totalXAmount = new BN(amount);
 	const totalYAmount = totalXAmount.mul(new BN(Number(activeBinPricePerToken)));
+
+	console.log(amount, totalXAmount, totalYAmount, '\n\n\n\n\n');
   
 	// Add Liquidity to existing position
 	const addLiquidityTx = await dlmmPool.addLiquidityByStrategy({
-	  positionPubKey: newBalancePosition.publicKey,
+	  positionPubKey: new PublicKey(bs58.decode(posPubKey)),
 	  user: user.publicKey,
-	  totalXAmount,
-	  totalYAmount,
+	  totalXAmount: totalXAmount,
+	  totalYAmount: totalYAmount,
 	  strategy: {
 		maxBinId,
 		minBinId,
 		strategyType: StrategyType.SpotBalanced,
 	  },
 	});
+
+
   
 	try {
 	  const addLiquidityTxHash = await sendAndConfirmTransaction(
@@ -123,12 +145,23 @@ export async function removePositionLiquidity(dlmmPool: DLMM) {
 	const userPositions = await getUserPositions(dlmmPool);
 	const removeLiquidityTxs = (
 	  await Promise.all(
-		userPositions.map(({ publicKey, positionData }) => {
-		  const binIdsToRemove = positionData.positionBinData.map(
+		userPositions.map(async (position) => {
+		  const binIdsToRemove = position.positionData.positionBinData.map(
 			(bin) => bin.binId
 		  );
+		
+		  const { owner, liquidityShares } = await dlmmPool.program.account.positionV2.fetch(position.publicKey);
+
+
+		  if(liquidityShares.every(share => share.isZero())) {
+			return dlmmPool.closePosition({
+				owner: owner,
+				position: position,
+			  });
+		  }
+
 		  return dlmmPool.removeLiquidity({
-			position: publicKey,
+			position: position.publicKey,
 			user: user.publicKey,
 			binIds: binIdsToRemove,
 			bps: new BN(100 * 100),
